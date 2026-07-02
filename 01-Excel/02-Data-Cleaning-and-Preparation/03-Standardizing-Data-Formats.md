@@ -121,18 +121,6 @@ Example
 
 ---
 
-# Removing Non-Printable Characters
-
-Use:
-
-```excel
-=CLEAN(A2)
-```
-
-This removes hidden or non-printable characters imported from external systems.
-
----
-
 # Standardizing Dates
 
 Excel works best when all dates follow the same format.
