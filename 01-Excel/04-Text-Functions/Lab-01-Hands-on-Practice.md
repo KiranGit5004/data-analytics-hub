@@ -66,6 +66,12 @@ Example
 EMP-1001
 ```
 
+### Formula
+
+``` excel
+=LEFT(Basic_Practice!A2,3)
+```
+
 Expected Output
 
 ```
@@ -77,6 +83,12 @@ EMP
 # Exercise 2 - RIGHT()
 
 Extract the last four digits of every phone number.
+
+### Formula
+
+``` excel
+=RIGHT(Basic_Practice!E2,4)
+```
 
 Expected Output
 
@@ -110,6 +122,16 @@ Expected Output
 
 Find the total number of characters in every employee name.
 
+### Formula
+
+``` excel
+=LEN(Basic_Practice!B2)
+```
+
+### Expected Output
+
+    Character Count
+
 ---
 
 # Exercise 5 - TRIM()
@@ -120,6 +142,12 @@ Example
 
 ```
 Rahul      Sharma
+```
+
+### Formula
+
+``` excel
+=TRIM(Basic_Practice!B2)
 ```
 
 Expected
@@ -134,11 +162,39 @@ Rahul Sharma
 
 Convert every department into uppercase.
 
+### Sample Value
+
+    it
+
+### Formula
+
+``` excel
+=UPPER(Basic_Practice!C2)
+```
+
+### Expected Output
+
+    IT
+
 ---
 
 # Exercise 7 - LOWER()
 
 Convert all email addresses into lowercase.
+
+### Sample Value
+
+    RAHUL@GMAIL.COM
+
+### Formula
+
+``` excel
+=LOWER(Basic_Practice!D2)
+```
+
+### Expected Output
+
+    rahul@gmail.com
 
 ---
 
@@ -146,17 +202,43 @@ Convert all email addresses into lowercase.
 
 Convert employee names into Proper Case.
 
+### Sample Value
+
+    rahul sharma
+
+### Formula
+
+``` excel
+=PROPER(TRIM(Basic_Practice!B2))
+```
+
+### Expected Output
+
+    Rahul Sharma
+
 ---
 
 # Exercise 9 - CONCAT()
 
 Create a Full Employee Label.
 
-Format
+### Source Cell
 
+`A2 & B2`
+
+### Sample Value
+
+    EMP-1001
+
+### Formula
+
+``` excel
+=CONCAT(Basic_Practice!A2," - ",PROPER(TRIM(Basic_Practice!B2)))
 ```
-EMP-1001 - Rahul Sharma
-```
+
+### Expected Output
+
+    EMP-1001 - Rahul Sharma
 
 ---
 
@@ -164,13 +246,17 @@ EMP-1001 - Rahul Sharma
 
 Combine
 
-City
+City, Department, Employee ID using commas.
 
-Department
+### Source Cell
 
-Employee ID
+`H2,C2,A2`
 
-using commas.
+### Formula
+
+``` excel
+=TEXTJOIN(", ",TRUE,Basic_Practice!H2,UPPER(Basic_Practice!C2),Basic_Practice!A2)
+```
 
 Expected
 
@@ -184,11 +270,23 @@ Nashik, IT, EMP-1001
 
 Format Joining Date
 
-Example
+### Source Cell
 
+`Basic_Practice!F2`
+
+### Sample Value
+
+    01/07/2025
+
+### Formula
+
+``` excel
+=TEXT(Basic_Practice!F2,"dd-mmm-yyyy")
 ```
-01-Jul-2025
-```
+
+### Expected Output
+
+    01-Jul-2025
 
 ---
 
@@ -198,29 +296,67 @@ Salary is stored as text.
 
 Convert it into numbers.
 
+### Source Cell
+
+`Basic_Practice!G2`
+
+### Sample Value
+
+    45000
+
+### Formula
+
+``` excel
+=VALUE(Basic_Practice!G2)
+```
+
+### Expected Output
+
+    45000
+
 ---
 
 # Exercise 13 - FIND()
 
-Find the position of
+Find the position of @ inside every email.
 
-```
-@
+### Source Cell
+
+`Basic_Practice!D2`
+
+### Sample Value
+
+    rahul@gmail.com
+
+### Formula
+
+``` excel
+=FIND("@",Basic_Practice!D2)
 ```
 
-inside every email.
+### Expected Output
+
+    6
 
 ---
 
 # Exercise 14 - SEARCH()
 
-Search for
+Search for *gmail* inside every email.
 
-```
-gmail
+### Source Cell
+
+`Basic_Practice!D2`
+
+### Formula
+
+``` excel
+=SEARCH("gmail",Basic_Practice!D2)
 ```
 
-inside every email.
+### Expected Output
+
+    7
 
 ---
 
@@ -234,6 +370,11 @@ Example
 9876543210
 ```
 
+### Formula
+
+``` excel
+=REPLACE(Basic_Practice!E2,3,8,"******")
+
 Expected
 
 ```
@@ -244,23 +385,24 @@ Expected
 
 # Exercise 16 - SUBSTITUTE()
 
-Replace
+Replace EMP with Staff
 
-```
-EMP
+### Source Cell
+
+`Basic_Practice!A2`
+
+### Sample Value
+
+    EMP-1001
+
+### Formula
+
+``` excel
+=SUBSTITUTE(Basic_Practice!A2,"EMP","STAFF")
 ```
 
-with
+### Expected Output
 
-```
-STAFF
-```
-
-Expected
-
-```
-STAFF-1001
-```
+    STAFF-1001
 
 ---
-
