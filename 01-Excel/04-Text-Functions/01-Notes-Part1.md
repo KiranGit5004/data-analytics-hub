@@ -65,6 +65,36 @@ It is commonly used when important information appears at the beginning of a val
 
 ---
 
+## You can reference data from Sheet1 while writing formulas in Sheet2.
+
+Suppose you have:
+
+Sheet1: Basic_Practice
+Sheet2: Expected_Output
+
+Example
+Sheet1 (Basic_Practice)
+Employee ID
+EMP-1001
+EMP-1002
+EMP-1003
+
+Sheet2 (Expected_Output)
+
+In cell A2, enter:
+
+```excel
+=LEFT(Basic_Practice!A2,3)
+```
+
+Result:
+
+```excel
+EMP
+```
+Now drag the formula down.
+
+
 ## Arguments
 
 | Argument | Description |
